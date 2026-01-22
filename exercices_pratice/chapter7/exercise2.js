@@ -3,40 +3,32 @@ import { Graph } from "./graph.js";
 const graph = {};
 
 graph.inicio = {};
-graph.inicio.a = 5;
-graph.inicio.b = 2;
+graph.inicio.a = 10;
 
 graph.a = {};
-graph.a.c = 4;
-graph.a.d = 2;
+graph.a.b = 20;
 
 graph.b = {};
-graph.b.a = 8;
-graph.b.d = 7;
+graph.b.c = 1;
+graph.b.fim = 30;
 
 graph.c = {};
-graph.c.d = 6;
-graph.c.fim = 3;
-
-graph.d = {};
-graph.d.fim = 1;
+graph.c.a = 1;
 
 graph.fim = {};
 
 const costs = {};
 
-costs.a = 5;
-costs.b = 2;
+costs.a = 10;
+costs.b = Number.MAX_VALUE;
 costs.c = Number.MAX_VALUE;
-costs.d = Number.MAX_VALUE;
 costs.fim = Number.MAX_VALUE;
 
 const parents = {};
 
 parents.a = "inicio";
-parents.b = "inicio";
+parents.b = null;
 parents.c = null;
-parents.d = null;
 parents.fim = null;
 
 const graphDijkstra = new Graph(graph, costs, parents);

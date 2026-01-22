@@ -86,7 +86,7 @@ while (node !== null) {
 		const novoCusto = custo + vizinhos[item];
 
 		/* Caseo seja mais barato chegar a um vizingo a partir dessa vertice */
-		if (custo[item] > novoCusto) {
+		if (custos[item] > novoCusto) {
 			/* Atualizando o seu cuisto */
 			custos[item] = novoCusto;
 
